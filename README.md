@@ -1,18 +1,18 @@
-# Java Agent Middleware
+Java Agent Middleware 
+---
 
 [ ![Download](https://api.bintray.com/packages/scunsaiocu/it.francescosantagati/jam/images/download.svg) ](https://bintray.com/scunsaiocu/it.francescosantagati/jam/_latestVersion)
 
-A university project about development of a java library based on JADE (Java Agent DEvelopment Framework) di TILab.
+**Laboratorio di Programmazione III per l’anno accademico 2014/2015.**
+*Università degli studi di Torino*
 
-----
+**Professore: Matteo Baldoni**  
 
-Progetto di laboratorio per il corso di Programmazione III per l’anno accademico 2014/2015. Il presente laboratorio ha come obiettivo la realizzazione di una semplice infrastruttura di rete basata su RMI per lo svilluppo di applicazioni che utilizzino a tecnologia ad agenti. L’infrastruttura è denominata Java Agent Middleware (JAM) e ispirata al Java Agent DEvelopment Framework (JADE) di TILab
+Il presente laboratorio ha come obiettivo la realizzazione di una semplice infrastruttura di rete basata su RMI per lo svilluppo di applicazioni che utilizzino a tecnologia ad agenti.
+L’infrastruttura è denominata Java Agent Middleware (JAM) e ispirata al Java Agent DEvelopment Framework (JADE) di TILab.
 
-Professore Matteo Baldoni
-Lucidi: prof. Martelli
-
-----
-
+Java Agent Middlware
+---
 Un agente è un sistema computazionale situato in un ambiente, e capace di azioni autonome nell’ambiente per raggiungere i suoi obiettivi di progetto.
 Nella maggior parte dei domini un agente non ha completa conoscenza dell’ambiente e completo controllo su di esso. L’ambiente può evolvere dinamicamente independentemente dall’agente, le azioni dell agente possono fallire. In generale, si assume che l’ambiente sia non-deterministico. Il problema principale per un agente è quello di decidere quale delle sue azioni dovrà eseguire per soddisfare meglio i suoi obiettivi di progetto. Un agente intelligente deve avere un comportamento flessibile per riuscire a soddisfare i propri obiettivi di progetto.
 Con flessibile si intende:
@@ -51,14 +51,15 @@ Ci sono ovvie somiglianze fra agenti e oggetti: entrambi sono entità computatio
 Un’altra differenza riguarda la nozione di comportamento flessibile (reattivo, proattivo, sociale). Il modello standard ad oggetti non considera la costruzione di sistemi che presentino questi tipi di comportamento. Inoltre i sistemi multiagente sono inerentemente distribuiti: ogni agente ha un flusso di controllo indipendente (processo o thread).
 Le architetture software sono sempre più costituite da componenti che interagiscono dinamicamente attraverso protocolli complessi. L’interazione è probabilmente la caratteristica più importante del software complesso. La programmazione ad agenti viene vista da molti come un nuovo paradigma di programmazione, naturale evoluzione di altri paradigmi di programmazione, in particolare della programmazione ad oggetti. Sono gi`e state sviluppate metodologie per analisi e progetto agent-oriented, metodi formali di specifica e verifica di sistemi ad agenti e tecniche di implementazione.
 
-### Introduzione agli agenti in JAM
+Introduzione agli agenti in JAM
+---
 L’infrastruttura è basata sulla tecnologia RMI di Java. 
-![alt text][rmi_architecture]
+![RMI Architecture][rmi_architecture]
 
 Questa sarà costituita da un ambiente a runtime, denominato Runtime Agent Middleware (RAM, nel seguito). Il RAM sarà realizzato direttamente sull’infrastruttura RMI offerta da Java mediante una serie di classi che costituiranno lo Agent Directory Service Layer (ADSL, nel seguito). Il RAM permetterà di ospitare, cercare, trovare, eseguire e soprattutto scambiare messaggi tra gli agenti presenti in un dato momento. Agenti che saranno definiti mediante un insieme di opportune classi, che costituiscono un altro degli obiettivi del laboratorio, denominate Java Agent Middleware (JAM, nel seguito).
 In JAM un agente è un oggetto, istanza di una particolare classe che estende la JAMAgent e che descrive il proprio stato interno. Il comportamento di un agente è definito da un insieme di oggetti di tipo JAMBehaviour che implementano il metodo action e che hanno accesso, mediante opportuno puntatore, allo stato dell’agente proprietario di tali comportamenti. In un certo senso, tale metodo rappresenta le “azioni” che definiscono il comportamento dell’agente stesso. Il codice (Java) di ogni metodo action è eseguito su un thread dedicato (vedi Figura 3). Il metodo action è eseguito una volta soltanto se la classe che implementa il metodo estende JAMSimpleBehaviour, è invece eseguito ciclicamente fino a che il metodo done non è invocato, se la classe estende JAMWhileBehaviour.
 
-![alt text][jam_state]
+![JAM Agent schema][jam_state]
 
 In generale un agente in JAM è definito mediante la classe che descrive il proprio stato interno (la classe che estende JAMAgent e fornisce le funzionalità comunicative) e le classi che definiscono il suo comportamento. Ad esempio, le seguenti sono tre classi che definiscono tre comportamenti diversi:
 
