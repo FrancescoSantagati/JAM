@@ -3,15 +3,14 @@ Java Agent Middleware
 
 [ ![Download](https://api.bintray.com/packages/scunsaiocu/it.francescosantagati/jam/images/download.svg) ](https://bintray.com/scunsaiocu/it.francescosantagati/jam/_latestVersion)
 
-**Laboratorio di Programmazione III per l’anno accademico 2014/2015.**
-*Università degli studi di Torino*
-
+**Laboratorio di Programmazione III per l’anno accademico 2014/2015.**  
+*Università degli studi di Torino*  
 **Professore: Matteo Baldoni**  
 
 Il presente laboratorio ha come obiettivo la realizzazione di una semplice infrastruttura di rete basata su RMI per lo svilluppo di applicazioni che utilizzino a tecnologia ad agenti.
 L’infrastruttura è denominata Java Agent Middleware (JAM) e ispirata al Java Agent DEvelopment Framework (JADE) di TILab.
 
-Java Agent Middlware
+Agenti intelligenti
 ---
 Un agente è un sistema computazionale situato in un ambiente, e capace di azioni autonome nell’ambiente per raggiungere i suoi obiettivi di progetto.
 Nella maggior parte dei domini un agente non ha completa conoscenza dell’ambiente e completo controllo su di esso. L’ambiente può evolvere dinamicamente independentemente dall’agente, le azioni dell agente possono fallire. In generale, si assume che l’ambiente sia non-deterministico. Il problema principale per un agente è quello di decidere quale delle sue azioni dovrà eseguire per soddisfare meglio i suoi obiettivi di progetto. Un agente intelligente deve avere un comportamento flessibile per riuscire a soddisfare i propri obiettivi di progetto.
@@ -169,8 +168,8 @@ public void action () {
 
 Dell'effetivo trasferimento dei messaggi via rete si occuperà la sottostante classe JAMAgent (la cui realizzazione e uno degli obiettivi del progetto).
 
-[rmi_architecture]: https://github.com/FrancescoSantagati/java-agent-middleware/tree/master/images/rmi_architecture.png "RMI"
-[jam_state]: https://github.com/FrancescoSantagati/java-agent-middleware/tree/master/images/jam_state.png "JAM Agent"
+[rmi_architecture]: https://raw.githubusercontent.com/FrancescoSantagati/java-agent-middleware/master/images/rmi_architecture.png "RMI"
+[jam_state]: https://raw.githubusercontent.com/FrancescoSantagati/java-agent-middleware/master/images/jam_state.png "JAM Agent"
 
 ### Riferimenti bibliografici
 
