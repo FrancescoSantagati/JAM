@@ -1,0 +1,4 @@
+include ':jam'
+include ':sample'
+
+rootProject.name = 'jam-parent'

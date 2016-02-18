@@ -1,0 +1,24 @@
+subprojects { project ->
+    group = GROUP
+    version = VERSION_NAME
+
+    repositories {
+        mavenCentral()
+    }
+
+    buildscript {
+        repositories {
+            mavenCentral()
+        }
+    }
+}
+
+ext {
+    sourceCompatibilityVersion = JavaVersion.VERSION_1_7
+    targetCompatibilityVersion = JavaVersion.VERSION_1_7
+}
+
+ext.deps = [
+    // Test dependencies
+    junit: 'junit:junit:4.12'
+]
