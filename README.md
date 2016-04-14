@@ -10,6 +10,24 @@ Java Agent Middleware
 Il presente laboratorio ha come obiettivo la realizzazione di una semplice infrastruttura di rete basata su RMI per lo svilluppo di applicazioni che utilizzino a tecnologia ad agenti.
 L’infrastruttura è denominata Java Agent Middleware (JAM) e ispirata al Java Agent DEvelopment Framework (JADE) di TILab.
 
+Download
+---
+
+#### GRADLE
+```
+compile 'it.francescosantagati:jam:1.0'
+```
+
+#### MAVEN
+```
+<dependency>
+  <groupId>it.francescosantagati</groupId>
+  <artifactId>jam</artifactId>
+  <version>1.0</version>
+  <type>pom</type>
+</dependency>
+```
+
 Agenti intelligenti
 ---
 Un agente è un sistema computazionale situato in un ambiente, e capace di azioni autonome nell’ambiente per raggiungere i suoi obiettivi di progetto.
@@ -142,7 +160,7 @@ agent.start();
 [ . . . ]
 ```
 
-Un agente puo comunicare con altri agenti (conoscendone il nome (identicatore) o inviando messaggi a tutti gli agenti presenti in un dato momento) attraverso i metodi send. Inoltre può leggere i messaggi ricevuti dagli altri agenti mediante i metodi receive. Tipicamente tali medodi sono utilizzti all'interno del metodo action:
+Un agente può comunicare con altri agenti (conoscendone il nome (identicatore) o inviando messaggi a tutti gli agenti presenti in un dato momento) attraverso i metodi send. Inoltre può leggere i messaggi ricevuti dagli altri agenti mediante i metodi receive. Tipicamente tali medodi sono utilizzti all'interno del metodo action:
 ```java
 [ . . . ]
 JAMAgent agent = new MioAgente ( . . . );
@@ -151,7 +169,7 @@ agent.start();
 [ . . . ]
 ```
 
-Un agente puo comunicare con altri agenti (conoscendone il nome (identicatore) o inviando messaggi a tutti gli agenti presenti in un dato momento) attraverso i metodi send. Inoltre può leggere i messaggi ricevuti dagli altri agenti mediante i metodi receive. Tipicamente tali metodi sono utilizzti all'interno del metodo action:
+Un agente può comunicare con altri agenti (conoscendone il nome (identicatore) o inviando messaggi a tutti gli agenti presenti in un dato momento) attraverso i metodi send. Inoltre può leggere i messaggi ricevuti dagli altri agenti mediante i metodi receive. Tipicamente tali metodi sono utilizzti all'interno del metodo action:
 ```java
 public void action () {
     [ . . . ]
@@ -166,7 +184,7 @@ public void action () {
 }
 ```
 
-Dell'effetivo trasferimento dei messaggi via rete si occuperà la sottostante classe JAMAgent (la cui realizzazione e uno degli obiettivi del progetto).
+Dell'effetivo trasferimento dei messaggi via rete si occuperà la sottostante classe JAMAgent (la cui realizzazione è uno degli obiettivi del progetto).
 
 [rmi_architecture]: https://raw.githubusercontent.com/FrancescoSantagati/java-agent-middleware/master/images/rmi_architecture.png "RMI"
 [jam_state]: https://raw.githubusercontent.com/FrancescoSantagati/java-agent-middleware/master/images/jam_state.png "JAM Agent"
